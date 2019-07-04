@@ -33,6 +33,11 @@ categories: 办公应用
 
 私有仓库只能自己或者指定的朋友才有权限操作（私有仓库是收费的）
 
+### 问题汇总
+如何使用嵌套的git仓库： [Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-工具-子模块)
+
+
+
 ### 创建仓库 仓库主页说明
 [GitHub学习总结（二）——创建仓库以及仓库主页说明](https://blog.csdn.net/qq_36501591/article/details/80531363)
 注册账号的过程略过,注意验证邮箱那里,Github的邮件可能会进入垃圾箱
@@ -135,4 +140,14 @@ GitHub允许你添加多个Key，只要把每台电脑的Key都添加到GitHub�
   git push （[-u] origin master)：把当前分支master推送到远程，由于**远程库可能是空的**，我们第一次推送master分支时，可以加上了-u参数
   其他：注意下SSH警告，一般没有啥大问题。
 * [从远程库克隆](https://www.liaoxuefeng.com/wiki/896043488029600/898732792973664)
+  最好用SSH，使用HTTPS不仅速度慢，每次推送还需要输入口令。
   
+### [分支管理](https://www.liaoxuefeng.com/wiki/896043488029600/896954848507552)
+了解下Git分支相对于SVN分支有哪些优点。
+* [创建和合并分支](https://www.liaoxuefeng.com/wiki/896043488029600/900003767775424)
+  注意一些指针这个概念，重新理解一下checkout
+  操作指令：git checkout命令加上-b参数表示创建并切换，相当于branch+checkout这两条指令。
+  git branch用于查看当前分支，dev分支的工作完成后，添加提交后再返回master分支会发现我们之前的新添加提交的工作内容不见了
+  git merge命令用于合并指定分支到当前分支。
+  git branch -d可用于产出指定分支。
+可以用小结内容回顾。
